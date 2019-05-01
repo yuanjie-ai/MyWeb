@@ -12,6 +12,7 @@ from flask import Flask, request, render_template, jsonify, redirect, url_for
 app = Flask(__name__)
 
 dic = {}
+tz = timezone('Asia/Shanghai')
 delta = pd.to_timedelta('1d')
 
 
@@ -33,7 +34,6 @@ def signin():
 
     ################################################################
     # 清空前一天数据，只保留当天数据
-    tz = timezone('Asia/Shanghai')
     date = pd.datetime.now(tz).date()
     if str(date - delta) in dic:
         dic.pop(str(date - delta))
@@ -55,4 +55,4 @@ def meeting_result():
 
 
 if __name__ == '__main__':
-    app.run('192.168.3.11', debug=True)
+    app.run('0.0.0.0', debug=True)
