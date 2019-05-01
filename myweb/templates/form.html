@@ -35,14 +35,16 @@
                 <textarea name="progress" rows="5" cols="128" required
                           placeholder="1. ...
 2. ..."></textarea>
-
-                <br/>
-                <br/>
+                <!--两行空格-->
+                {% for i in range(2) %} <br/> {% endfor %}
 
                 <button type="submit" style="color:darkblue">
                     Push
                 </button>
+                <br/>
+            <h4> 重新提交可覆盖</h4>
             </p>
+
         </fieldset>
     </form>
 </div>
