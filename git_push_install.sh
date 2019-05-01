@@ -18,7 +18,7 @@ git pull
 git add *
 git commit -m "$update_info"
 git push
-pip uninstall yuan -y \
+pip uninstall myweb -y \
 && pip install git+https://github.com/Jie-Yuan/MyWeb.git -U -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 exit 0
