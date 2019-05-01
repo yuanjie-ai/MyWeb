@@ -45,7 +45,8 @@ def signin():
 
     # 重定向
     # return redirect('meeting_result')  # redirect('路由') 路由：redirect(url_for('路由函数'))
-    return render_template('result.html', text=text)
+    # return render_template('result.html', text=text)
+    return render_template('form.html', text=text)
 
 
 @app.route('/meeting_result', methods=['GET'])
@@ -54,4 +55,4 @@ def meeting_result():
 
 
 if __name__ == '__main__':
-    app.run('0.0.0.0', debug=True)
+    app.run('192.168.3.11', debug=True)

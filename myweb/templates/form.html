@@ -2,6 +2,7 @@
 <head>
     <title style="color: red">小米南京会议纪要</title>
     <link rel="icon" href="https://cloud.d.xiaomi.net/react/static/media/LOGO36.d3d970c2.png" sizes="32x32">
+
 </head>
 <body bgcolor="rgb(0,0,0)">
 
@@ -43,6 +44,12 @@
                 </button>
                 <br/>
             <h4> 重新提交可覆盖</h4>
+            <hr>
+            <h4 style="text-align: center">
+                {% for i in text.split('\n') %}
+                {{i}}<br/>
+                {% endfor %}
+            </h4>
             </p>
 
         </fieldset>
