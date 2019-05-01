@@ -14,6 +14,8 @@ app = Flask(__name__)
 dic = {}
 tz = timezone('Asia/Shanghai')
 delta = pd.to_timedelta('1d')
+# icon = 'https://static.easyicon.net/preview/119/1193422.gif'
+# img = 'https://cloud.d.xiaomi.net/react/static/media/LOGO36.d3d970c2.png'
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -45,7 +47,6 @@ def signin():
 
     # 重定向
     # return redirect('meeting_result')  # redirect('路由') 路由：redirect(url_for('路由函数'))
-    # return render_template('result.html', text=text)
     return render_template('form.html', text=text)
 
 

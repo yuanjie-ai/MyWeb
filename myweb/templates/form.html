@@ -1,7 +1,8 @@
 <html>
 <head>
     <title style="color: red">小米南京会议纪要</title>
-    <link rel="icon" href="https://cloud.d.xiaomi.net/react/static/media/LOGO36.d3d970c2.png" sizes="32x32">
+    <link rel="icon" href='https://static.easyicon.net/preview/119/1193422.gif' } sizes="32x32">
+
 
 </head>
 <body bgcolor="rgb(0,0,0)">
@@ -13,7 +14,7 @@
 <div style="text-align: center">
 
     <p>
-        <img src="https://cloud.d.xiaomi.net/react/static/media/LOGO36.d3d970c2.png"/>
+        <img src='https://cloud.d.xiaomi.net/react/static/media/LOGO36.d3d970c2.png'/>
     </p>
 
 
@@ -34,23 +35,29 @@
             <p>
                 进度：
                 <textarea name="progress" rows="5" cols="128" required
-                          placeholder="1. ...
+                          placeholder="1. ... 换行
 2. ..."></textarea>
                 <!--两行空格-->
                 {% for i in range(2) %} <br/> {% endfor %}
 
-                <button type="submit" style="color:darkblue">
+                <button type="submit" style="color: darkblue">
                     Push
                 </button>
                 <br/>
-            <h4> 重新提交可覆盖</h4>
-            <hr>
-            <h4 style="text-align: center">
+            <h4 style="color: darkblue">重新提交可覆盖</h4>
+
+
+            <h4 style="color: whitesmoke">
+                <hr/>
+                {%if text%}
                 {% for i in text.split('\n') %}
                 {{i}}<br/>
                 {% endfor %}
+                {%endif%}
             </h4>
+
             </p>
+
 
         </fieldset>
     </form>
