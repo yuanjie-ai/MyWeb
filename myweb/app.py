@@ -9,6 +9,8 @@ import pandas as pd
 from pytz import timezone
 from flask import Flask, request, render_template, jsonify, redirect, url_for
 
+import json
+
 app = Flask(__name__)
 
 dic = {}
@@ -47,7 +49,7 @@ def signin():
 
     # 重定向
     # return redirect('meeting_result')  # redirect('路由') 路由：redirect(url_for('路由函数'))
-    return render_template('form.html', text=text)
+    return render_template('form.html', text=text, dic=dic)
 
 
 @app.route('/meeting_result', methods=['GET'])
