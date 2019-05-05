@@ -13,7 +13,6 @@ app = Flask(__name__)
 
 dic = {}
 tz = timezone('Asia/Shanghai')
-delta = pd.to_timedelta('1d')
 # icon = 'https://static.easyicon.net/preview/119/1193422.gif'
 # img = 'https://cloud.d.xiaomi.net/react/static/media/LOGO36.d3d970c2.png'
 
@@ -37,8 +36,9 @@ def signin():
     ################################################################
     # 清空前一天数据，只保留当天数据
     date = pd.datetime.now(tz).date()
-    if str(date - delta) in dic:
-        dic.pop(str(date - delta))
+    for k in dic.keys():
+        if k < str(date):
+            dic.pop(k)
 
     dic.setdefault(str(date), {})[name] = text
     # from pprint import pprint
